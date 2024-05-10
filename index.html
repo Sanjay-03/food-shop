@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+
+  <body>
+    <div class="container mt-2">
+      <h1 class="text-center my-3">Burgers</h1>
+      <div class="row" id="burgers"></div>
+    </div>
+  </body>
+
+  <script>
+    let burgers = [
+      {
+        image_name: "Tasty Burger",
+        image_url: "assets/img/burger_1.jpeg",
+        image_desc: "Tasty Burger Description.",
+      },
+      {
+        image_name: "Normal Burger",
+        image_url: "assets/img/burger_2.jpg",
+        image_desc: "Normal Burger Description.",
+      },
+      {
+        image_name: "Spicy Burger",
+        image_url: "assets/img/burger_3.jpeg",
+        image_desc: "Spicy Burger Description.",
+      },
+      {
+        image_name: "Tasty Burger",
+        image_url: "assets/img/burger_1.jpeg",
+        image_desc: "Tasty Burger Description.",
+      },
+      {
+        image_name: "Normal Burger",
+        image_url: "assets/img/burger_2.jpg",
+        image_desc: "Normal Burger Description.",
+      },
+      {
+        image_name: "Spicy Burger",
+        image_url: "assets/img/burger_3.jpeg",
+        image_desc: "Spicy Burger Description.",
+      },
+      {
+        image_name: "Tasty Burger",
+        image_url: "assets/img/burger_1.jpeg",
+        image_desc: "Tasty Burger Description.",
+      },
+      {
+        image_name: "Normal Burger",
+        image_url: "assets/img/burger_2.jpg",
+        image_desc: "Normal Burger Description.",
+      },
+      {
+        image_name: "Spicy Burger",
+        image_url: "assets/img/burger_3.jpeg",
+        image_desc: "Spicy Burger Description.",
+      },
+    ];
+
+    function getBurgers() {
+      burgers.forEach((e) => {
+        $("#burgers").append(`
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center text-center">
+              <div class="card h-100" style="width: 18rem">
+                <div class="card-body">
+                  <img src="${e.image_url}" class="card-img-top" alt="${e.image_name}" />
+                </div>
+                <div class="card-footer text-body-secondary">
+                  <p class="card-text">${e.image_desc}</p>
+                </div>
+              </div>
+            </div>
+        `);
+      });
+    }
+    getBurgers();
+  </script>
+</html>
